@@ -80,3 +80,19 @@ Kubernetes status
 kubectl get pods
 kubectl describe pod <pod-name>
 
+
+
+//TF
+mkdir terraform-lab
+cd terraform-lab
+code .
+terraform init
+terraform validate
+terraform plan
+terraform apply
+dir
+Get-Content devops.txt
+terraform show
+terraform state list
+terraform destroy
+dir
