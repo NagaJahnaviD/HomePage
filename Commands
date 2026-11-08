@@ -67,3 +67,16 @@ docker run -d --name student-docker -p 8080:3000 student-crud
 kubectl port-forward service/student-service 8081:80
 docker ps
 kubectl get pods
+
+
+// vis
+Docker logs
+docker logs -f devops-web-container
+Docker resource monitoring
+docker stats
+Kubernetes logs
+kubectl logs <pod-name>
+Kubernetes status
+kubectl get pods
+kubectl describe pod <pod-name>
+
