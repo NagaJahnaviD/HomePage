@@ -1,0 +1,69 @@
+docker --version
+docker version
+wsl --version
+wsl --status
+wsl --install
+
+
+docker pull nginx
+docker images
+
+
+docker run -d --name web -p 8080:80 nginx
+docker ps
+docker ps -a
+docker logs web
+docker inspect web
+docker stats web
+docker stop web
+docker rm web
+
+
+npm init -y
+npm install express
+
+
+docker build -t student-crud .
+docker images
+
+
+docker run -d --name student-crud-container -p 8080:3000 student-crud
+docker ps
+docker logs student-crud-container
+docker stop student-crud-container
+docker rm student-crud-container
+
+
+kubectl version
+kubectl get nodes
+kubectl config current-context
+kubectl config get-contexts
+kubectl config use-context minikube
+
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+
+kubectl get pods
+kubectl get deployments
+kubectl get services
+
+
+kubectl port-forward service/student-service 8080:80
+
+kubectl apply -f deployment-scale.yaml
+kubectl apply -f service-scale.yaml
+
+
+kubectl get pods
+kubectl get deployments
+kubectl get services
+kubectl scale deployment student-scaled --replicas=3
+kubectl logs <pod-name>
+
+13. Simultaneous Docker and Kubernetes Execution
+docker run -d --name student-docker -p 8080:3000 student-crud
+kubectl port-forward service/student-service 8081:80
+docker ps
+kubectl get pods
