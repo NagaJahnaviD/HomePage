@@ -96,3 +96,10 @@ terraform show
 terraform state list
 terraform destroy
 dir
+
+
+
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --runInBand"
+  },
